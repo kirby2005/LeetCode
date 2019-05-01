@@ -54,6 +54,12 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 		rest = rest->next;
 	}
 
+	if (carry > 0)
+	{
+		ListNode* last = new ListNode(carry);
+		currentNode->next = last;
+	}
+
 	currentNode = head->next;
 	delete(head);
 	head = nullptr;
@@ -62,20 +68,10 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 
 int main(int argc, char* argv[])
 {
-	ListNode* a1 = new ListNode(2);
-	ListNode* a2 = new ListNode(4);
-	ListNode* a3 = new ListNode(3);
-	a1->next = a2;
-	a2->next = a3;
-	ListNode* b1 = new ListNode(5);
-	ListNode* b2 = new ListNode(6);
-	ListNode* b3 = new ListNode(4);
-	ListNode* b4 = new ListNode(1);
-	ListNode* b5 = new ListNode(2);
+	ListNode* a1 = new ListNode(9);
+	ListNode* b1 = new ListNode(9);
+	ListNode* b2 = new ListNode(9);
 	b1->next = b2;
-	b2->next = b3;
-	b3->next = b4;
-	b4->next = b5;
 
 	auto result = addTwoNumbers(a1, b1);
 
