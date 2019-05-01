@@ -11,7 +11,7 @@ vector<int> twoSum(vector<int>& nums, int target)
 	{
 		numMap.emplace(nums[i], i);
 		auto res = numMap.find(target - nums[i]);
-		if (res != numMap.end())
+		if (res != numMap.end() && i != res->second)
 		{
 			return vector<int>{ i, res->second };
 		}
@@ -22,8 +22,8 @@ vector<int> twoSum(vector<int>& nums, int target)
 
 int main(int argc, char* argv[])
 {
-	vector<int> input{2, 7, 11, 15};
-	int target = 9;
+	vector<int> input{3, 3};
+	int target = 6;
 
 	auto result = twoSum(input, target);
 
