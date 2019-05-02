@@ -10,14 +10,16 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 	int carry = 0;
 	ListNode* head = new ListNode(0);
 	ListNode* currentNode = head;
+	ListNode* currentL1 = l1;
+	ListNode* currentL2 = l2;
 
-	while (l1 && l2)
+	while (currentL1 && currentL2)
 	{
 		ListNode* newNode = new ListNode(0);
 		currentNode->next = newNode;
 		currentNode = newNode;
 
-		int count = l1->val + l2->val + carry;
+		int count = currentL1->val + currentL2->val + carry;
 		if (count >= 10)
 		{
 			currentNode->val = count % 10;
@@ -29,11 +31,11 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 			carry = 0;
 		}
 
-		l1 = l1->next;
-		l2 = l2->next;
+		currentL1 = currentL1->next;
+		currentL2 = currentL2->next;
 	}
 
-	ListNode* rest = l1 ? l1 : l2;
+	ListNode* rest = currentL1 ? currentL1 : currentL2;
 	while (rest)
 	{
 		ListNode* newNode = new ListNode(0);
