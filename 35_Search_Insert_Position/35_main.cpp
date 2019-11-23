@@ -5,7 +5,7 @@ using namespace std;
 static vector<int> nums{ 1, 3, 5, 6 };
 static int target = 5;
 
-int binarySearch(const vector<int>& nums, int i, int j, int target)
+int binarySearch_Recursive(const vector<int>& nums, int i, int j, int target)
 {
 	if (i == j)
 	{
@@ -22,12 +22,37 @@ int binarySearch(const vector<int>& nums, int i, int j, int target)
 	int m = i + (j - i) / 2;
 	if (nums[m] < target)
 	{
-		return binarySearch(nums, m + 1, j, target);
+		return binarySearch_Recursive(nums, m + 1, j, target);
 	}
 	else
 	{
-		return binarySearch(nums, i, m, target);
+		return binarySearch_Recursive(nums, i, m, target);
 	}
+}
+
+int binarySearch(const vector<int>& nums, int target)
+{
+	int i = 0, j = nums.size() - 1;
+
+	while (i < j)
+	{
+		int m = i + (j - i) / 2;
+		if (nums[m] < target)
+		{
+			i = m + 1;
+		}
+		else
+		{
+			j = m;
+		}
+	}
+
+	if (nums[i] < target)
+	{
+		return i + 1;
+	}
+
+	return i;
 }
 
 int searchInsert(vector<int>& nums, int target)
@@ -36,7 +61,9 @@ int searchInsert(vector<int>& nums, int target)
 	{
 		return 0;
 	}
-	return binarySearch(nums, 0, nums.size() - 1, target);
+	//return binarySearch_Recursive(nums, 0, nums.size() - 1, target);
+
+	return binarySearch(nums, target);
 }
 
 
