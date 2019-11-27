@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-static vector<int> nums{ 8,-19,5,-4,20 };
+static vector<int> nums{ -2,1,-3,4,-1,2,1,-5,4 };
+//static vector<int> nums{ 8,-19,5,-4,20 };
 
 int maxSubArray(vector<int>& nums)
 {
@@ -10,31 +11,18 @@ int maxSubArray(vector<int>& nums)
 		return 0;
 	}
 
-	int front = 0, end = 0;
-	int lastMax = nums[0];
-	int lastArraySum = nums[0];
+	vector<int> maxEndValue;
+	maxEndValue.push_back(nums[0]);
+	int currentMax = nums[0];
 	for (int i = 1; i < nums.size(); ++i)
 	{
-		int sum = lastArraySum + nums[i];
-		if (sum >= lastMax && sum >= nums[i])
-		{
-			end = i;
-			lastArraySum = sum;
-		}
-		else if (lastMax >= sum && lastMax >= nums[i])
-		{
-			lastArraySum = sum;
-		}
-		else if (nums[i] >= lastMax && nums[i] >= sum)
-		{
-			front = i;
-			end = i;
-			lastArraySum = nums[i];
-		}
-		lastMax = lastMax >= sum ? (lastMax >= nums[i] ? lastMax : nums[i]) : (sum >= nums[i] ? sum : nums[i]);
+		int lastMax = maxEndValue[i - 1];
+		int max = lastMax > 0 ? lastMax + nums[i] : nums[i];
+		maxEndValue.push_back(max);
+		currentMax = currentMax >= max ? currentMax : max;
 	}
-
-	return end - front + 1;
+	
+	return currentMax;
 }
 
 int main(int argc, char* argv[])
