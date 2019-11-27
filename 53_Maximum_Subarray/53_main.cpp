@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-static vector<int> nums{ -2,1,-3,4,-1,2,1,-5,4 };
+static vector<int> nums{ 8,-19,5,-4,20 };
 
 int maxSubArray(vector<int>& nums)
 {
@@ -16,16 +16,16 @@ int maxSubArray(vector<int>& nums)
 	for (int i = 1; i < nums.size(); ++i)
 	{
 		int sum = lastArraySum + nums[i];
-		if (sum > lastMax && sum > nums[i])
+		if (sum >= lastMax && sum >= nums[i])
 		{
 			end = i;
 			lastArraySum = sum;
 		}
-		else if (lastMax > sum && lastMax > nums[i])
+		else if (lastMax >= sum && lastMax >= nums[i])
 		{
 			lastArraySum = sum;
 		}
-		else if (nums[i] > lastMax && nums[i] > sum)
+		else if (nums[i] >= lastMax && nums[i] >= sum)
 		{
 			front = i;
 			end = i;
