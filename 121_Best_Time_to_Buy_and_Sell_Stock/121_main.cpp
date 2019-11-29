@@ -6,6 +6,11 @@ static vector<int> nums{ 7,1,5,3,6,4 };
 
 int maxProfit(vector<int>& prices)
 {
+	if (prices.size() == 0 || prices.size() == 1)
+	{
+		return 0;
+	}
+
 	int currentMaxProfit = 0;
 	int minBuy = prices[0];
 
