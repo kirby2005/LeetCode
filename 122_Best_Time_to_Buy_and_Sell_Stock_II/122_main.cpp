@@ -63,7 +63,39 @@ int maxProfit(vector<int>& prices)
 	return profit;
 }
 
+int maxProfit2(vector<int>& prices)
+{
+	if (prices.size() <= 1)
+	{
+		return 0;
+	}
+
+	int profit = 0;
+	int valley = prices[0];
+	int peak = prices[0];
+
+	int i = 1;
+	while (i < prices.size())
+	{
+		while (i < prices.size() && prices[i - 1] >= prices[i])
+		{
+			++i;
+		}
+		valley = prices[i - 1];
+
+		while (i < prices.size() && prices[i - 1] <= prices[i])
+		{
+			++i;
+		}
+		peak = prices[i - 1];
+		profit += peak - valley;
+	}
+
+	return profit;
+}
+
 int main(int argc, char* argv[])
 {
 	int result = maxProfit(test);
+	int result2 = maxProfit2(test);
 }
