@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "122_Best_Time_to_Buy_and_Se
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5_Longest_Palindromic_Substring", "5_Longest_Palindromic_Substring\5_Longest_Palindromic_Substring.vcxproj", "{F797CEE2-3BC0-4DD6-B6C9-EB2C14BA7125}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "27_Remove_Element", "27_Remove_Element\27_Remove_Element.vcxproj", "{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{F797CEE2-3BC0-4DD6-B6C9-EB2C14BA7125}.Release|x64.Build.0 = Release|x64
 		{F797CEE2-3BC0-4DD6-B6C9-EB2C14BA7125}.Release|x86.ActiveCfg = Release|Win32
 		{F797CEE2-3BC0-4DD6-B6C9-EB2C14BA7125}.Release|x86.Build.0 = Release|Win32
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Debug|x64.ActiveCfg = Debug|x64
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Debug|x64.Build.0 = Debug|x64
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Debug|x86.ActiveCfg = Debug|Win32
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Debug|x86.Build.0 = Debug|Win32
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Release|x64.ActiveCfg = Release|x64
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Release|x64.Build.0 = Release|x64
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Release|x86.ActiveCfg = Release|Win32
+		{BAD9C8DA-7EF9-4BC7-A50A-864FFDDB93E7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
