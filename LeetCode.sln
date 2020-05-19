@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "162_Find_Peak_Element", "16
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "42_Trapping_Rain_Water", "42_Trapping_Rain_Water\42_Trapping_Rain_Water.vcxproj", "{149DCDEA-A863-49CE-8AA4-43B57442DD16}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "100_Same_Tree", "100_Same_Tree\100_Same_Tree.vcxproj", "{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{149DCDEA-A863-49CE-8AA4-43B57442DD16}.Release|x64.Build.0 = Release|x64
 		{149DCDEA-A863-49CE-8AA4-43B57442DD16}.Release|x86.ActiveCfg = Release|Win32
 		{149DCDEA-A863-49CE-8AA4-43B57442DD16}.Release|x86.Build.0 = Release|Win32
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Debug|x64.ActiveCfg = Debug|x64
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Debug|x64.Build.0 = Debug|x64
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Debug|x86.ActiveCfg = Debug|Win32
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Debug|x86.Build.0 = Debug|Win32
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Release|x64.ActiveCfg = Release|x64
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Release|x64.Build.0 = Release|x64
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Release|x86.ActiveCfg = Release|Win32
+		{216F1A2A-3C7C-4562-BEF0-790A2F8DCA8E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
