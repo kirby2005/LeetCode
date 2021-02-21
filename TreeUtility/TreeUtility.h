@@ -1,5 +1,8 @@
 #pragma once
 #include<map>
+#include<list>
+#include<vector>
+#include<array>
 #include<vector>
 
 namespace tree
@@ -60,4 +63,65 @@ namespace tree
 
 		return nodeArray.size() > 0 ? nodeArray[0] : nullptr;
     }
+
+	TreeNode* CreateSubBinaryTree(const std::vector<int*>& nodeVec, int index)
+	{
+		if (nodeVec.size() < index || nodeVec[index] == nullptr)
+		{
+			return nullptr;
+		}
+
+		TreeNode* node = new TreeNode(*nodeVec[index]);
+
+		int leftChildIndex = 2 * index + 1;
+		int rightChildIndex = 2 * index + 2;
+		if (nodeVec.size() > leftChildIndex && nodeVec[leftChildIndex] != nullptr)
+		{
+			node->left = CreateSubBinaryTree(nodeVec, leftChildIndex);
+		}
+
+		if (nodeVec.size() > rightChildIndex && nodeVec[rightChildIndex] != nullptr)
+		{
+			node->right = CreateSubBinaryTree(nodeVec, rightChildIndex);
+		}
+
+		return node;
+	}
+
+	TreeNode* CreateBinaryTree(const std::vector<int*>& nodeVec)
+	{
+		if (nodeVec.size() == 0 || nodeVec[0] == nullptr)
+		{
+			return nullptr;
+		}
+
+		TreeNode* head = CreateSubBinaryTree(nodeVec, 0);
+
+		//for (std::vector<int*>::const_iterator citer = nodeVec.begin(); citer != nodeVec.end(); ++citer)
+		/*for (int i = 0; i < nodeVec.size(); ++i)
+		{
+			if (nodeVec[i] == nullptr)
+			{
+				std::cout << "null" << std::endl;
+			}
+			else
+			{
+				std::cout << *nodeVec[i] << std::endl;
+			}
+		}*/
+
+		return head;
+	}
+
+	int GetNodeHeight(const TreeNode* node)
+	{
+		if (node == nullptr)
+		{
+			return 0;
+		}
+
+		int leftHeight = GetNodeHeight(node->left);
+		int rightHeight = GetNodeHeight(node->right);
+		return leftHeight > rightHeight ? leftHeight + 1 : rightHeight + 1;
+	}
 }
