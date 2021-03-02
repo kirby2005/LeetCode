@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TreeUtility", "TreeUtility\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "9_Palindrome_Number_Easy", "9_Palindrome_Number_Easy\9_Palindrome_Number_Easy.vcxproj", "{DC3D7604-165A-461C-808F-E4190993AAB6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_Median_of_Two_Sorted_Arrays_Hard", "4_Median_of_Two_Sorted_Arrays_Hard\4_Median_of_Two_Sorted_Arrays_Hard.vcxproj", "{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,6 +183,14 @@ Global
 		{DC3D7604-165A-461C-808F-E4190993AAB6}.Release|x64.Build.0 = Release|x64
 		{DC3D7604-165A-461C-808F-E4190993AAB6}.Release|x86.ActiveCfg = Release|Win32
 		{DC3D7604-165A-461C-808F-E4190993AAB6}.Release|x86.Build.0 = Release|Win32
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Debug|x64.ActiveCfg = Debug|x64
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Debug|x64.Build.0 = Debug|x64
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Debug|x86.ActiveCfg = Debug|Win32
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Debug|x86.Build.0 = Debug|Win32
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Release|x64.ActiveCfg = Release|x64
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Release|x64.Build.0 = Release|x64
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Release|x86.ActiveCfg = Release|Win32
+		{56E3C54E-AD98-43CD-A63A-0ACD4A58263A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
