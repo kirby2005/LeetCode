@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4_Median_of_Two_Sorted_Arra
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "94_Binary_Tree_Inorder_Traversal_Medium", "94_Binary_Tree_Inorder_Traversal_Medium\94_Binary_Tree_Inorder_Traversal_Medium.vcxproj", "{74DC0F87-2CF4-420A-BA26-5ED392AF5D8B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "96_Unique_Binary_Search_Trees_Medium", "96_Unique_Binary_Search_Trees_Medium\96_Unique_Binary_Search_Trees_Medium.vcxproj", "{D4107405-390D-42C3-90B6-3352C25E902E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -201,6 +203,14 @@ Global
 		{74DC0F87-2CF4-420A-BA26-5ED392AF5D8B}.Release|x64.Build.0 = Release|x64
 		{74DC0F87-2CF4-420A-BA26-5ED392AF5D8B}.Release|x86.ActiveCfg = Release|Win32
 		{74DC0F87-2CF4-420A-BA26-5ED392AF5D8B}.Release|x86.Build.0 = Release|Win32
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Debug|x64.ActiveCfg = Debug|x64
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Debug|x64.Build.0 = Debug|x64
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Debug|x86.ActiveCfg = Debug|Win32
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Debug|x86.Build.0 = Debug|Win32
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Release|x64.ActiveCfg = Release|x64
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Release|x64.Build.0 = Release|x64
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Release|x86.ActiveCfg = Release|Win32
+		{D4107405-390D-42C3-90B6-3352C25E902E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
