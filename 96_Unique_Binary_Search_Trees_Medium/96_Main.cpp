@@ -1,38 +1,35 @@
 #include <iostream>
-#include <unordered_map>
+#include <vector>
 using namespace std;
 
 int numTrees(int n)
 {
-	unordered_map<int, int> dp;
+	vector<int> dp;
 
-	dp[0] = 1;
-	dp[1] = 1;
+	dp.push_back(1);
+	dp.push_back(1);
 
 	int sum = 0;
-	for (int i = 0; i <= (n / 2) - 1; ++i)
+	for (int i = 0; i <= n; ++i)
 	{
-		int Ri = 0;
-		int Rn_i_1 = 0;
+		if (i >= 2)
+		{
+			int dpN = 0;
+			for (int j = 0; j <= i - 1; ++j)
+			{
+				dpN += dp[j] * dp[i - 1 - j];
+			}
 
-		Ri = dp[i];
-		Rn_i_1 = dp[n - i - 1];
-		sum += (Ri * Rn_i_1) * 2;
+			dp.push_back(dpN);
+		}
 	}
 
-	if ((n & 1) > 0)  // if odd
-	{
-		sum += dp[(n / 2)] * dp[(n / 2)];
-	}
 
-	dp[n] = sum;
-
-	return sum;
+	return dp[n];
 }
 
 int main(int argc, char* argv[])
 {
-	int x = numTrees(3);
 	for (int i = 0; i <= 19; ++i)
 	{
 		cout << numTrees(i) << endl;
