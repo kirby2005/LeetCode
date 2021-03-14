@@ -9,19 +9,15 @@ int numTrees(int n)
 	dp.push_back(1);
 	dp.push_back(1);
 
-	int sum = 0;
-	for (int i = 0; i <= n; ++i)
+	for (int i = 2; i <= n; ++i)
 	{
-		if (i >= 2)
+		int dpN = 0;
+		for (int j = 0; j <= i - 1; ++j)
 		{
-			int dpN = 0;
-			for (int j = 0; j <= i - 1; ++j)
-			{
-				dpN += dp[j] * dp[i - 1 - j];
-			}
-
-			dp.push_back(dpN);
+			dpN += dp[j] * dp[i - 1 - j];
 		}
+
+		dp.push_back(dpN);
 	}
 
 
